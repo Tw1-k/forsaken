@@ -30,7 +30,7 @@ local generatorconnection = nil
 local puzzleuiconnection = nil
 local iscompletinggenerator = false
 local lastcompletiontime = 0
-local completioncooldown = 2
+local completioncooldown = 2.5
 
 -- [[ fov system ]]
 local fovenabled = true
@@ -98,10 +98,10 @@ MainGenerator:AddToggle("MG_AutoComplete", {
 local MG_AutoComplete_True = MainGenerator:AddDependencyBox()
 MG_AutoComplete_True:AddSlider("MG_CompletionDelay", { 
     Text = "Completion Delay", 
-    Default = 2, 
-    Min = 1, 
-    Max = 4, 
-    Rounding = 1, 
+    Default = 2.5, 
+    Min = 2.5, 
+    Max = 8, 
+    Rounding = 0.5, 
     Compact = true,
     Suffix = "s"
 })
